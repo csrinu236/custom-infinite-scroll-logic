@@ -53,26 +53,34 @@ const SinglePost = () => {
     }
   }, [postId]);
 
-  return comments && post ? (
+  return (
     <section className="singlePost">
-      <h2>Title: {post?.content}</h2>
-      <h3>CreatedAt: {post?.createdAt}</h3>
+      {post ? (
+        <>
+          <h2>Title: {post?.content}</h2>
+          <h3>CreatedAt: {post?.createdAt}</h3>
+        </>
+      ) : (
+        <Loader></Loader>
+      )}
       <div className="inputContainer">
         <input type="text" ref={inputRef} />
         <button className="submitBtn" onClick={() => submitComment()}>
           Submit
         </button>
       </div>
-      {comments.map((com) => {
-        return (
-          <p className="comment" key={com?.id}>
-            {com?.content}
-          </p>
-        );
-      })}
+      {comments ? (
+        comments.map((com) => {
+          return (
+            <p className="comment" key={com?.id}>
+              {com?.content}
+            </p>
+          );
+        })
+      ) : (
+        <Loader></Loader>
+      )}
     </section>
-  ) : (
-    <Loader></Loader>
   );
 };
 
