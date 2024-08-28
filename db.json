@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "content": "geee",
+      "createdAt": 1724839746220,
+      "id": "d7c534bd-dcf8-4ab3-bf8f-92e0abfe2852"
+    },
+    {
+      "content": "new ghee",
+      "createdAt": 1724839869706,
+      "id": "29eb32ed-8fc8-49dd-9dc9-a03dea95a939"
+    },
+    {
+      "content": "latest ghee",
+      "createdAt": 1724840402125,
+      "id": "d1c56523-d5c5-467f-8aa6-8311c30bbf14"
+    },
+    {
+      "content": "ground nut oil",
+      "createdAt": 1724840750360,
+      "id": "88f56dde-c757-41a7-88c5-6d4db45f15fa"
+    }
+  ],
+  "comments": [
+    {
+      "content": "this is my cmment 1",
+      "createdAt": 1724840275982,
+      "postId": "d7c534bd-dcf8-4ab3-bf8f-92e0abfe2852",
+      "id": 1
+    },
+    {
+      "content": "this is my comment 2",
+      "createdAt": 1724840289990,
+      "postId": "d7c534bd-dcf8-4ab3-bf8f-92e0abfe2852",
+      "id": 2
+    },
+    {
+      "content": "comment 3333",
+      "createdAt": 1724840298725,
+      "postId": "d7c534bd-dcf8-4ab3-bf8f-92e0abfe2852",
+      "id": 3
+    },
+    {
+      "content": "comment for latest gheee",
+      "createdAt": 1724840429192,
+      "postId": "d1c56523-d5c5-467f-8aa6-8311c30bbf14",
+      "id": 4
+    }
+  ]
+}
