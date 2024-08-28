@@ -35,7 +35,7 @@ const SinglePost = () => {
       console.log({ refData: inputRef.current.value });
       const { data } = await axios({
         method: "post",
-        url: `http://localhost:3002/comments?_sort=createdAt&_order=desc`,
+        url: `http://localhost:3002/comments`,
         data: { content: inputRef.current.value, createdAt: new Date().getTime(), postId: postId },
       });
       console.log({ data });
