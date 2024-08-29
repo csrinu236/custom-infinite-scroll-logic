@@ -12,6 +12,4 @@ yarn dev
 pnpm dev
 # or
 bun dev
-or
-npx json-server db.json
 ```
