@@ -40,7 +40,7 @@ export default function Home() {
   };
 
   // const { data, error, isLoading, mutate } = swrFetcher(`http://localhost:3002/posts?_sort=createdAt&_order=desc`);
-  const { data, lastElementRef, isLoading } = useSwrInfiniteFetcher(`http://localhost:3002/posts`);
+  const { data, lastElementRef, isLoading, mutate } = useSwrInfiniteFetcher(`http://localhost:3002/posts`);
 
   useEffect(() => {
     if (data) {

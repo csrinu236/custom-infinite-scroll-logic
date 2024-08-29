@@ -161,5 +161,66 @@
       "id": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e"
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "content": "New comment ",
+      "createdAt": 1724934238621,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 1
+    },
+    {
+      "content": "Macbook pro comment",
+      "createdAt": 1724934391318,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 2
+    },
+    {
+      "content": "Nice laptop",
+      "createdAt": 1724934429222,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 3
+    },
+    {
+      "content": "Nice laptop 2",
+      "createdAt": 1724934477594,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 4
+    },
+    {
+      "content": "Macbook Pro is best",
+      "createdAt": 1724934486007,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 5
+    },
+    {
+      "content": "heello",
+      "createdAt": 1724934543322,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 6
+    },
+    {
+      "content": "heello 2",
+      "createdAt": 1724934570655,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 7
+    },
+    {
+      "content": "air is better ",
+      "createdAt": 1724934746997,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 8
+    },
+    {
+      "content": "over priced",
+      "createdAt": 1724934762610,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 9
+    },
+    {
+      "content": "air >> macbook pro",
+      "createdAt": 1724934782343,
+      "postId": "b3c55cc0-e1fc-4a21-b7d5-14f4cc174e6e",
+      "id": 10
+    }
+  ]
 }

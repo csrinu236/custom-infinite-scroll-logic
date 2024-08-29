@@ -1,16 +1,16 @@
 import useSWRInfinite from "swr/infinite";
-import { fetcher } from "./fetcher";
+import { infiniteFetcher } from "./fetcher";
 import { useRef, useCallback } from "react";
 
 export const useSwrInfiniteFetcher = (url) => {
   const getKey = (pageIndex, previousPageData) => {
     pageIndex = pageIndex + 1;
 
-    if (previousPageData && !previousPageData?.list.length) return null; // reached the end
+    if ((previousPageData && !previousPageData?.list.length) || !url) return null; // reached the end
     return `${url}?_page=${pageIndex}&_limit=6&_sort=createdAt&_order=desc`; // SWR key
   };
   // if you pass empty string/null to useSWR(null, fetcher) =>
-  const { data, error, isValidating, size, setSize } = useSWRInfinite(getKey, fetcher, {
+  const { data, error, isValidating, size, setSize, mutate } = useSWRInfinite(getKey, infiniteFetcher, {
     revalidateOnFocus: false,
     revalidateOnMount: true,
     revalidateIfStale: false,
@@ -47,5 +47,5 @@ export const useSwrInfiniteFetcher = (url) => {
     [data]
   );
 
-  return { lastElementRef, isLoading, hasMoreFlagFromServer, data };
+  return { lastElementRef, isLoading, hasMoreFlagFromServer, data, mutate };
 };
