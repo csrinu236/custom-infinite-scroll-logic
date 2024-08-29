@@ -59,7 +59,7 @@ a.post {
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 70px;
-  margin: 0 auto;
+  margin: 2rem auto;
   aspect-ratio: 1;
   display: grid;
   -webkit-mask: conic-gradient(from 15deg, #0000, #000);
