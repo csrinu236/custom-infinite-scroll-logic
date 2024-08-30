@@ -7,7 +7,7 @@ export const useSwrInfiniteFetcher = (url) => {
     pageIndex = pageIndex + 1;
 
     if ((previousPageData && !previousPageData?.list.length) || !url) return null; // reached the end
-    return `${url}?_page=${pageIndex}&_limit=6&_sort=createdAt&_order=desc`; // SWR key
+    return `${url}?_page=${pageIndex}&_limit=1&_sort=createdAt&_order=desc`; // SWR key
   };
   // if you pass empty string/null to useSWR(null, fetcher) =>
   const { data, error, isValidating, size, setSize, mutate } = useSWRInfinite(getKey, infiniteFetcher, {
@@ -17,8 +17,8 @@ export const useSwrInfiniteFetcher = (url) => {
     revalidateFirstPage: false,
   });
 
-  const hasMoreFlagFromServer = data?.[size - 1]?.hasMorePages;
-  // console.log({ hasMoreFlagFromServer });
+  const hasMoreFlagFromServer = data?.[size - 1]?.hasMorePages == undefined ? true : data?.[size - 1]?.hasMorePages;
+  console.log({ hasMoreFlagFromServer });
   const isLoading = !data?.[size - 1] && !error;
 
   // gets called whenever lastelement ref is created,
@@ -47,5 +47,5 @@ export const useSwrInfiniteFetcher = (url) => {
     [data]
   );
 
-  return { lastElementRef, isLoading, hasMoreFlagFromServer, data, mutate };
+  return { lastElementRef, isLoading, hasMoreFlagFromServer, size, setSize, data, mutate };
 };

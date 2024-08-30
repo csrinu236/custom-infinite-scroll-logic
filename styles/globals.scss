@@ -179,3 +179,7 @@ input[type="text"]:focus {
     color: #222;
   }
 }
+
+.infiniteScrollComponent {
+  overflow: unset !important;
+}

@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar></Navbar>
-      <main>
+      <main id="main">
         <Component {...pageProps} />
       </main>
     </>
