@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Here I wrote Custom Infinite Scroll Logic for React/NextJs WITHOUT the use of 
 1) Scroll event listener + debouncing it,
-2) Any third-party npm packages like react-infinite-scroll.
+2) Any third-party npm packages like react-infinite-scroll. Thus, there no need to maintain enough initial height to enable infinite scroll.
    
 It can also be migrated to Angular with little research.
 I used intersection observer and useSWRInfinite(this has to fetch pagination data).
