@@ -8,7 +8,9 @@ Sometimes that can be problematic if page 1 data doesn't have enough data to spa
 
 But my Custom Infinite Scroll Logic will handle all such situations. It is independent of page 1 fetched data height. 
 Check these videos: 
+
 Custom Infinite Scroll Logic: https://www.awesomescreenshot.com/video/31006395?key=0f39d1c220b62afe29fcd4404fb8b953
+
 react-infinite-scroll: https://www.awesomescreenshot.com/video/31006947?key=4e175053c6a5931c8bef7b122662cd73 
 
    
