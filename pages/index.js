@@ -8,6 +8,7 @@ import axios from "axios";
 import { useState, useEffect, useRef, useId, useCallback } from "react";
 import useSWR from "swr";
 import InfiniteScroll from "react-infinite-scroll-component";
+import useInfiniteFetcher from "@/utils/useInfiniteFetcher";
 
 export default function Home() {
   const [posts, setPosts] = useState();
@@ -41,7 +42,8 @@ export default function Home() {
   };
 
   // const { data, error, isLoading, mutate } = swrFetcher(`http://localhost:3002/posts?_sort=createdAt&_order=desc`);
-  const { data, lastElementRef, isLoading, mutate, setSize, size, hasMoreFlagFromServer } = useSwrInfiniteFetcher(`http://localhost:3002/posts`);
+  // const { data, lastElementRef, isLoading, mutate, setSize, size, hasMoreFlagFromServer } = useSwrInfiniteFetcher(`http://localhost:3002/posts`);
+  const { data, lastElementRef, isLoading, mutate, error } = useInfiniteFetcher(`http://localhost:3002/posts`);
 
   useEffect(() => {
     if (data) {
