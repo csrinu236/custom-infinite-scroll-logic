@@ -66,7 +66,7 @@ const useInfiniteFetcher = (url) => {
     fetchData();
   }, [size]);
 
-  return { data, isLoading, size, setSize, lastElementRef, error };
+  return { data, isLoading, size, setSize, lastElementRef, error, hasMoreFlagFromServer };
 };
 
 export default useInfiniteFetcher;

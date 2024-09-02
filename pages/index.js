@@ -43,7 +43,7 @@ export default function Home() {
 
   // const { data, error, isLoading, mutate } = swrFetcher(`http://localhost:3002/posts?_sort=createdAt&_order=desc`);
   // const { data, lastElementRef, isLoading, mutate, setSize, size, hasMoreFlagFromServer } = useSwrInfiniteFetcher(`http://localhost:3002/posts`);
-  const { data, lastElementRef, isLoading, mutate, error } = useInfiniteFetcher(`http://localhost:3002/posts`);
+  const { data, lastElementRef, isLoading, mutate, error, hasMoreFlagFromServer, setSize, size } = useInfiniteFetcher(`http://localhost:3002/posts`);
 
   useEffect(() => {
     if (data) {
@@ -59,17 +59,17 @@ export default function Home() {
           Submit
         </button>
       </div>
-      {posts?.map((item, index) => {
+      {/* {posts?.map((item, index) => {
         if (posts.length === index + 1) {
           return <Post ref={lastElementRef} key={item.id} {...item}></Post>;
         }
         return <Post key={item.id} {...item}></Post>;
       })}
-      {isLoading && <Loader></Loader>}
+      {isLoading && <Loader></Loader>} */}
 
       {/* set limit to 2 in the api and you will see this won't work */}
       {/* Intersection observer >> InfiniteScroll */}
-      {/* <InfiniteScroll
+      <InfiniteScroll
         className="infiniteScrollComponent"
         dataLength={posts?.length || 0} //This is important field to render the next data
         next={() => setSize(size + 1)}
@@ -81,7 +81,7 @@ export default function Home() {
         {posts?.map((item) => {
           return <Post key={item.id} {...item}></Post>;
         })}
-      </InfiniteScroll> */}
+      </InfiniteScroll>
     </section>
   );
 }
