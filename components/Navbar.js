@@ -12,6 +12,9 @@ const Navbar = () => {
         <Link className="navlink" href="/">
           Home
         </Link>
+        <Link className="navlink" href="/reactquery">
+          ReactQuery
+        </Link>
       </div>
     </nav>
   );
