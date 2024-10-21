@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "json-server db.json -d 2000 -p 3002 -w db.json & next dev",
+    "dev": "json-server db.json -d 2000 -p 300 -w db.json & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
